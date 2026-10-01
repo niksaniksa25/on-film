@@ -1,0 +1,420 @@
+css
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0b0b0f;
+    color: white;
+}
+
+/* HEADER */
+
+header {
+    height: 80px;
+    padding: 0 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(11, 11, 15, 0.95);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #22222a;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: #ff3158;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ff3158;
+}
+
+.search-box {
+    display: flex;
+    background: #18181f;
+    border-radius: 30px;
+    overflow: hidden;
+    border: 1px solid #292932;
+}
+
+.search-box input {
+    width: 150px;
+    padding: 11px 15px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+}
+
+.search-box button {
+    width: 45px;
+    background: #ff3158;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+
+/* HERO */
+
+.hero {
+    min-height: 570px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.45;
+    z-index: -2;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        #0b0b0f 0%,
+        rgba(11, 11, 15, 0.75) 35%,
+        rgba(11, 11, 15, 0.15) 100%
+    );
+    z-index: -1;
+}
+
+.hero-content {
+    width: 550px;
+    margin-left: 8%;
+}
+
+.small-title {
+    color: #ff3158;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.hero h1 {
+    font-size: 65px;
+    line-height: 0.95;
+    margin-bottom: 20px;
+}
+
+.hero-info {
+    display: flex;
+    gap: 18px;
+    color: #ddd;
+    margin-bottom: 20px;
+}
+
+.hero-info span:first-child {
+    color: #ffd43b;
+}
+
+.description {
+    color: #bbb;
+    line-height: 1.7;
+    max-width: 500px;
+    margin-bottom: 25px;
+}
+
+.watch-btn {
+    padding: 14px 25px;
+    background: #ff3158;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.watch-btn:hover {
+    background: #e92349;
+    transform: translateY(-2px);
+}
+
+
+/* MOVIES */
+
+.movies-section {
+    padding: 80px 6%;
+}
+
+.section-title h2,
+.genres h2,
+.about h2 {
+    font-size: 35px;
+    margin-bottom: 35px;
+}
+
+.movies-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 18px;
+}
+
+.movie-card {
+    min-width: 0;
+}
+
+.poster {
+    height: 310px;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #18181f;
+}
+
+.poster img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: 0.4s;
+}
+
+.movie-card:hover .poster img {
+    transform: scale(1.07);
+}
+
+.rating {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.75);
+    padding: 6px 9px;
+    border-radius: 7px;
+    color: #ffd43b;
+    font-size: 13px;
+}
+
+.play-btn {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background: #ff3158;
+    color: white;
+    cursor: pointer;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.movie-card:hover .play-btn {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.movie-info {
+    padding: 12px 3px;
+}
+
+.movie-info h3 {
+    font-size: 17px;
+    margin-bottom: 7px;
+}
+
+.movie-info p {
+    color: #777;
+    font-size: 13px;
+}
+
+
+/* GENRES */
+
+.genres {
+    padding: 70px 6%;
+    background: #101015;
+    text-align: center;
+}
+
+.genres h2 {
+    margin-bottom: 25px;
+}
+
+.genre-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.genre-list button {
+    background: #1b1b23;
+    color: #ddd;
+    border: 1px solid #292932;
+    padding: 12px 22px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.genre-list button:hover {
+    background: #ff3158;
+    border-color: #ff3158;
+    color: white;
+}
+
+
+/* ABOUT */
+
+.about {
+    padding: 80px 10%;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    align-items: center;
+}
+
+.about h2 {
+    max-width: 450px;
+}
+
+.about > p {
+    color: #999;
+    max-width: 500px;
+    line-height: 1.8;
+}
+
+
+/* FOOTER */
+
+footer {
+    padding: 35px 6%;
+    border-top: 1px solid #22222a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer p {
+    color: #666;
+    font-size: 13px;
+}
+
+
+/* SEARCH RESULT */
+
+.hidden {
+    display: none;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 1100px) {
+
+    .movies-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    nav {
+        display: none;
+    }
+}
+
+@media (max-width: 650px) {
+
+    header {
+        height: 70px;
+        padding: 0 20px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .search-box input {
+        width: 100px;
+    }
+
+    .hero {
+        min-height: 520px;
+    }
+
+    .hero-content {
+        width: auto;
+        margin: 0 25px;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .movies-section {
+        padding: 55px 20px;
+    }
+
+    .movies-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .poster {
+        height: 250px;
+    }
+
+    .section-title h2,
+    .genres h2,
+    .about h2 {
+        font-size: 28px;
+    }
+
+    .about {
+        padding: 60px 25px;
+        display: block;
+    }
+
+    .about > p {
+        margin-top: 20px;
+    }
+
+    footer {
+        padding: 30px 20px;
+        display: block;
+        text-align: center;
+    }
+
+    footer p {
+        margin-top: 15px;
+    }
+}

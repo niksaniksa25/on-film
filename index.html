@@ -1,0 +1,241 @@
+```html
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CINEZONE — ფილმები</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="logo">CINE<span>ZONE</span></div>
+
+        <nav>
+            <a href="#home">მთავარი</a>
+            <a href="#movies">ფილმები</a>
+            <a href="#genres">ჟანრები</a>
+            <a href="#about">ჩვენ შესახებ</a>
+        </nav>
+
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="ფილმის ძებნა...">
+            <button onclick="searchMovies()">🔍</button>
+        </div>
+    </header>
+
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+
+        <!-- აქ შეგიძლია ჩასვა მთავარი ფილმის ფოტო -->
+        <img src="images/hero.jpg" alt="მთავარი ფილმი" class="hero-image">
+
+        <div class="hero-content">
+            <p class="small-title">🔥 კვირის ფილმი</p>
+
+            <h1>THE DARK<br>KNIGHT</h1>
+
+            <div class="hero-info">
+                <span>⭐ 9.0</span>
+                <span>2008</span>
+                <span>Action</span>
+            </div>
+
+            <p class="description">
+                ქალაქში ახალი საფრთხე ჩნდება და ბეტმენს
+                ყველაზე რთულ გამოწვევასთან უწევს გამკლავება.
+            </p>
+
+            <button class="watch-btn">▶ ნახე დეტალები</button>
+        </div>
+
+    </section>
+
+
+    <!-- MOVIES -->
+    <section class="movies-section" id="movies">
+
+        <div class="section-title">
+            <div>
+                <p class="small-title">აღმოაჩინე</p>
+                <h2>პოპულარული ფილმები</h2>
+            </div>
+        </div>
+
+
+        <div class="movies-grid" id="moviesGrid">
+
+            <!-- MOVIE 1 -->
+            <div class="movie-card">
+                <div class="poster">
+
+                    <!-- ჩასვი აქ შენი ფოტო -->
+                    <img src="images/movie1.jpg" alt="Movie 1">
+
+                    <div class="rating">⭐ 8.7</div>
+
+                    <button class="play-btn">▶</button>
+                </div>
+
+                <div class="movie-info">
+                    <h3>Inception</h3>
+                    <p>Action • Sci-Fi</p>
+                </div>
+            </div>
+
+
+            <!-- MOVIE 2 -->
+            <div class="movie-card">
+                <div class="poster">
+
+                    <!-- ჩასვი აქ შენი ფოტო -->
+                    <img src="images/movie2.jpg" alt="Movie 2">
+
+                    <div class="rating">⭐ 9.0</div>
+
+                    <button class="play-btn">▶</button>
+                </div>
+
+                <div class="movie-info">
+                    <h3>The Dark Knight</h3>
+                    <p>Action • Crime</p>
+                </div>
+            </div>
+
+
+            <!-- MOVIE 3 -->
+            <div class="movie-card">
+                <div class="poster">
+
+                    <!-- ჩასვი აქ შენი ფოტო -->
+                    <img src="images/movie3.jpg" alt="Movie 3">
+
+                    <div class="rating">⭐ 8.8</div>
+
+                    <button class="play-btn">▶</button>
+                </div>
+
+                <div class="movie-info">
+                    <h3>Interstellar</h3>
+                    <p>Sci-Fi • Drama</p>
+                </div>
+            </div>
+
+
+            <!-- MOVIE 4 -->
+            <div class="movie-card">
+                <div class="poster">
+
+                    <!-- ჩასვი აქ შენი ფოტო -->
+                    <img src="images/movie4.jpg" alt="Movie 4">
+
+                    <div class="rating">⭐ 8.6</div>
+
+                    <button class="play-btn">▶</button>
+                </div>
+
+                <div class="movie-info">
+                    <h3>Avengers</h3>
+                    <p>Action • Adventure</p>
+                </div>
+            </div>
+
+
+            <!-- MOVIE 5 -->
+            <div class="movie-card">
+                <div class="poster">
+
+                    <!-- ჩასვი აქ შენი ფოტო -->
+                    <img src="images/movie5.jpg" alt="Movie 5">
+
+                    <div class="rating">⭐ 8.5</div>
+
+                    <button class="play-btn">▶</button>
+                </div>
+
+                <div class="movie-info">
+                    <h3>Gladiator</h3>
+                    <p>Action • History</p>
+                </div>
+            </div>
+
+
+            <!-- MOVIE 6 -->
+            <div class="movie-card">
+                <div class="poster">
+
+                    <!-- ჩასვი აქ შენი ფოტო -->
+                    <img src="images/movie6.jpg" alt="Movie 6">
+
+                    <div class="rating">⭐ 8.4</div>
+
+                    <button class="play-btn">▶</button>
+                </div>
+
+                <div class="movie-info">
+                    <h3>Avatar</h3>
+                    <p>Adventure • Fantasy</p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- GENRES -->
+    <section class="genres" id="genres">
+
+        <p class="small-title">აირჩიე</p>
+        <h2>ჟანრები</h2>
+
+        <div class="genre-list">
+            <button>Action</button>
+            <button>Comedy</button>
+            <button>Horror</button>
+            <button>Sci-Fi</button>
+            <button>Drama</button>
+            <button>Adventure</button>
+            <button>Fantasy</button>
+            <button>Thriller</button>
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+
+        <div>
+            <p class="small-title">CINEZONE</p>
+            <h2>იპოვე შენი შემდეგი ფილმი.</h2>
+        </div>
+
+        <p>
+            CINEZONE არის მარტივი და თანამედროვე ფილმების
+            პლატფორმის დიზაინი, სადაც შეგიძლია აღმოაჩინო
+            საინტერესო ფილმები და შეარჩიო შენი საყვარელი ჟანრი.
+        </p>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="logo">CINE<span>ZONE</span></div>
+
+        <p>© 2026 CINEZONE. ყველა უფლება დაცულია.</p>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+```
